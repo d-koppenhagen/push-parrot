@@ -1,7 +1,9 @@
-<h1>Parrot</h1>
+<h1>Push Parrot</h1>
 
-<button type="button" (click)="subscribe()">activate</button>
-Is parrot allowed to speak? {{ permission() }}
+<button type="button" (click)="subscribe()"
+  [class.green]="permission() === 'granted'"
+  [class.red]="permission() === 'denied'"
+>Notifications: ({{ permission() }})</button>
 
 <form [formGroup]="notificationForm" (ngSubmit)="submit()">
   <label for="title">Title</label>
@@ -11,5 +13,7 @@ Is parrot allowed to speak? {{ permission() }}
   <button type="submit">Send</button>
 </form>
 
-<pre>{{ notificationService.messages() | json }}</pre>
+@if(notificationService.messages(); as messages) {
+  <pre>{{ messages | json }}</pre>
+}
 

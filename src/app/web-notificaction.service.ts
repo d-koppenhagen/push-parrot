@@ -41,7 +41,7 @@ export class WebNotificactionService {
     )
   }
 
-  sendMessage(message: Partial<{ title: string | null, description: string | null }>) {
-    return this.#http.post(`${this.#baseUrl}/notifications/send`, message);
+  sendMessage(title: string, description: string) {
+    return this.#http.post(`${this.#baseUrl}/notifications/send`, { title, description });
   }
 }

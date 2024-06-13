@@ -38,7 +38,7 @@ app.post('/notifications/send', (req, res) => {
     webPush.sendNotification(sub, JSON.stringify({
       notification: {
         title: req.body.title,
-        body: req.body.body
+        body: req.body.description
       }
     }))
   );

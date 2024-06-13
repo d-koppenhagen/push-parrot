@@ -1,7 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
 import { WebNotificactionService } from "./web-notificaction.service";
 import { JsonPipe } from "@angular/common";
-import {FormControl, FormGroup, ReactiveFormsModule} from "@angular/forms";
+import { FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
 
 @Component({
   selector: 'app-root',
@@ -32,6 +32,9 @@ export class AppComponent {
   }
 
   submit() {
-    this.notificationService.sendMessage(this.notificationForm.value).subscribe()
+    this.notificationService.sendMessage(
+      this.notificationForm.value.title || '',
+      this.notificationForm.value.description || ''
+    ).subscribe()
   }
 }

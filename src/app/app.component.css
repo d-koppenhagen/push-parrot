@@ -1,0 +1,135 @@
+/* Variables for colors and spacing */
+:host {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --background-color: #f5f5f5;
+  --text-color: #333;
+  --border-radius: 5px;
+  --padding: 10px;
+  --margin: 20px;
+
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+h1::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: var(--margin);
+  background-image: url("/parrot.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  margin: var(--margin) 0;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #2980b9; /* Darken the primary color */
+}
+
+button:active {
+  background-color: #5dade2; /* Lighten the primary color */
+}
+
+button.green {
+  background-color: #2ecc71;
+}
+
+button.green:hover {
+  background-color: #27ae60; /* Darken the primary color */
+}
+
+button.green:active {
+  background-color: #58d68d; /* Lighten the primary color */
+}
+
+button.red {
+  background-color: #dd2246;
+}
+
+button.red:hover {
+  background-color: #df2255; /* Darken the primary color */
+}
+
+button.red:active {
+  background-color: #de2144; /* Lighten the primary color */
+}
+
+/* Form styles */
+form {
+  background-color: #fff;
+  border: 1px solid #d5eaf3; /* Lighten the primary color */
+  border-radius: var(--border-radius);
+  padding: calc(var(--padding) * 2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+}
+
+form label {
+  display: block;
+  margin: var(--margin) 0 5px;
+  font-weight: bold;
+}
+
+form input {
+  width: calc(100% - calc(var(--padding) * 2));
+  padding: var(--padding);
+  margin-bottom: var(--margin);
+  border: 1px solid #d5eaf3; /* Lighten the primary color */
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+
+form button[type="submit"] {
+  width: 100%;
+  background-color: var(--secondary-color);
+}
+
+form button[type="submit"]:hover {
+  background-color: #27ae60; /* Darken the secondary color */
+}
+
+form button[type="submit"]:active {
+  background-color: #58d68d; /* Lighten the secondary color */
+}
+
+/* Notification display styles */
+pre {
+  background-color: #fff;
+  border: 1px solid #d5eaf3; /* Lighten the primary color */
+  border-radius: var(--border-radius);
+  padding: calc(var(--padding)* 2);
+  margin-top: var(--margin);
+  overflow-x: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+}
