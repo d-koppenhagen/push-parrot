@@ -58,27 +58,27 @@ button:active {
   background-color: #5dade2; /* Lighten the primary color */
 }
 
-button.green {
+.green {
   background-color: #2ecc71;
 }
 
-button.green:hover {
+.green:hover {
   background-color: #27ae60; /* Darken the primary color */
 }
 
-button.green:active {
+.green:active {
   background-color: #58d68d; /* Lighten the primary color */
 }
 
-button.red {
+.red {
   background-color: #dd2246;
 }
 
-button.red:hover {
+.red:hover {
   background-color: #df2255; /* Darken the primary color */
 }
 
-button.red:active {
+.red:active {
   background-color: #de2144; /* Lighten the primary color */
 }
 
@@ -90,7 +90,7 @@ form {
   padding: calc(var(--padding) * 2);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
 }
 
 form label {
@@ -131,5 +131,5 @@ pre {
   overflow-x: auto;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
 }

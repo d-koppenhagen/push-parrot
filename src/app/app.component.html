@@ -3,7 +3,7 @@
 <button type="button" (click)="subscribe()"
   [class.green]="permission() === 'granted'"
   [class.red]="permission() === 'denied'"
->Notifications: ({{ permission() }})</button>
+>Notifications: {{ permission() }}</button>
 
 <form [formGroup]="notificationForm" (ngSubmit)="submit()">
   <label for="title">Title</label>
